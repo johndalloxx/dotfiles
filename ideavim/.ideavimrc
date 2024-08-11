@@ -1,0 +1,261 @@
+"" .ideavimrc - John Fredrik Dall
+
+"" Base Settings
+"" =======================================================
+
+set scrolloff=10
+set showmode
+set showcmd
+set relativenumber
+set number
+
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set visualbell
+
+" Use system clipboard
+set clipboard+=unnamed
+
+let mapleader = " "
+
+
+"" Plugin Settings
+"" ========================================================
+
+set surround
+set highlightedyank
+set sneak
+set nerdtree
+
+" Easymotion settings
+set easymotion
+set notimeout
+
+" Which-key settings
+set which-key
+let g:WhichKey_FontSize = 16
+let g:WhichKey_CommandColor = "#41ead4"
+let g:WhichKey_PrefixColor = "#f335b2"
+let g:WhichKey_SortOrder = "by_key_prefix_first"
+
+let g:WhichKeyDesc_leader = "<leader> Leader key"
+
+let g:WhichKeyDesc_leader = "<leader>e Open file explorer"
+
+let g:WhichKeyDesc_easymotion = "<leader>j Jump with Easymotion"
+
+let g:WhichKeyDesc_comment = "<leader>c Comment line"
+
+let g:WHichKeyDesc_debug = "<leader>b Debugging"
+let g:WhichKeyDesc_debug_breakpoint = "<leader>ba Toggle breakpoint"
+
+let g:WhichKeyDesc_fold = "<leader>z Folding"
+let g:WhichKeyDesc_fold_all = "<leader>zc Fold all regions"
+let g:WhichKeyDesc_unfold_all = "<leader>zo Unfold all regions"
+
+let g:WhichKeyDesc_window = "<leader>w Window splits"
+let g:WhichKeyDesc_window_split_vertically = "<leader>wv Split vertically"
+let g:WhichKeyDesc_window_split_horizontally = "<leader>wh Split horizontally"
+let g:WhichKeyDesc_window_split_unsplit = "<leader>wu Unsplit"
+let g:WhichKeyDesc_window_split_move_editor = "<leader>wm Move editor to opposite tab group"
+
+
+let g:WhichKeyDesc_display = "<leader>d Display options"
+let g:WhichKeyDesc_zen_mode = "<leader>dz Toggle Zen mode"
+let g:WhichKeyDesc_df_mode = "<leader>dd Toggle Distraction-Free mode"
+let g:WhichKeyDesc_fullscreen = "<leader>df Toggle full screen"
+
+let g:WhichKeyDesc_file_nav = "<leader>f File navigation"
+let g:WhichKeyDesc_file_nav_goto_file = "<leader>ff Go to file"
+let g:WhichKeyDesc_file_nav_goto_content = "<leader>fc Search for file content"
+let g:WhichKeyDesc_file_nav_show_recent_files = "<leader>fr Show recent files"
+let g:WhichKeyDesc_file_nav_show_recent_locations = "<leader>fl Show recent locations"
+
+let g:WhichKeyDesc_close_tab = "<leader>q Close active tab"
+
+let g:WhichKeyDesc_refactoring = "<leader>r Refactoring menu"
+let g:WhichKeyDesc_refactoring_rename = "<leader>rn Rename element"
+let g:WhichKeyDesc_refactoring_method = "<leader>rm Extract method"
+let g:WhichKeyDesc_refactoring_variable = "<leader>rv Introduce variable"
+let g:WhichKeyDesc_refactoring_field = "<leader>rf Introduce field"
+let g:WhichKeyDesc_refactoring_signature = "<leader>rs Change signature"
+let g:WhichKeyDesc_refactoring_all = "<leader>rr Open refactorings list"
+
+let g:WhichKeyDesc_goto = "<leader>g Go to X"
+let g:WhichKeyDesc_goto_declaration = "<leader>gd Go to Definition"
+let g:WhichKeyDesc_goto_type_declaration = "<leader>gy Go to Type Definition"
+let g:WhichKeyDesc_goto_implementation = "<leader>gi Go to Implementation"
+let g:WhichKeyDesc_goto_usages = "<leader>gu Go to Usages"
+let g:WhichKeyDesc_goto_test = "<leader>gt Go to Test"
+let g:WhichKeyDesc_goto_back = "<leader>gb Go Back"
+let g:WhichKeyDesc_goto_forward = "<leader>gf Go Forward"
+
+let g:WhichKeyDesc_UI = "<leader>u UI"
+let g:WhichKeyDesc_UI_increase_font = "<leader>uif Increase font size"
+let g:WhichKeyDesc_UI_decrease_font = "<leader>udf Decrease font size"
+
+let g:WhichKeyDesc_git = "<leader>g Git operations"
+let g:WhichKeyDesc_git_commit = "<leader>gc Open Git commit dialog"
+let g:WhichKeyDesc_git_status = "<leader>gs Open Git status dialog"
+let g:WhichKeyDesc_git_branches = "<leader>gb Open Git branches list"
+
+let g:WhichKeyDesc_project = "<leader>p Search in project"
+let g:WhichKeyDesc_project_find = "<leader>ps Find in path"
+let g:WhichKeyDesc_project_files = "<leader>pf Go to file"
+let g:WhichKeyDesc_project_replace = "<leader>pr Search and replace"
+let g:WhichKeyDesc_project_content = "<leader>pc Search for file content"
+let g:WhichKeyDesc_project_locations = "<leader>pl Show recent locations"
+let g:WhichKeyDesc_project_new_file = "<leader>pn Create new scratch file"
+
+let g:WhichKeyDesc_start = "<leader>s Start Menu"
+let g:WhichKeyDesc_start_run = "<leader>sr Run"
+let g:WhichKeyDesc_start_debug = "<leader>sd Debug"
+let g:WhichKeyDesc_start_stop = "<leader>ss Stop"
+let g:WhichKeyDesc_source = "<leader>so Source .ideavimrc"
+
+let g:WhichKeyDesc_inspect = "<leader>i Inspect"
+let g:WhichKeyDesc_inspect_parameter = "<leader>ip Show parameter info"
+
+let g:WhichKeyDesc_harpoon = "<leader>h Harpoon"
+let g:WhichKeyDesc_harpoon_goto = "<leader>h1-4 Go to Harpoon"
+let g:WhichKeyDesc_harpoon_add = "<leader>a Add to Harpoon"
+let g:WhichKeyDesc_harpoon_show = "<C-e> Show Harpoon"
+
+"" Key mappings
+"" ========================================================
+
+inoremap jk <Esc>
+
+" Tab navigation
+nnoremap <C-p> gt
+nnoremap <C-y> gT
+
+" Pane navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
+
+" Errors
+nmap ]d <Action>(ReSharperGotoNextErrorInSolution)
+nmap [d <Action>(ReSharperGotoPrevErrorInSolution)
+
+" Jump between methods
+nmap [[ <Action>(MethodUp)
+nmap ]] <Action>(MethodDown)
+
+" Easy visual indentation
+vnoremap < <gv
+vnoremap > >gv
+
+" Move Visual Mode selection
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+" Execute macro saved in 'q' register
+nnoremap qj @q
+
+" Popup navigation
+imap <C-l> <Action>(EditorDown)
+imap <C-h> <Action>(EditorUp)
+" Pick from popup
+imap <C-y> <Action>(EditorChooseLookupItem)
+
+" Open Suggestions
+imap <C-space> <Action>(CodeCompletion)
+
+"" Leader commands
+"" ========================================================
+
+" Source .ideavimrc
+map <leader>so :source ~/.ideavimrc<CR>
+
+" Comment lines
+map <leader>c <action>(CommentByLineComment)
+
+" Jump around with easymotion
+map <leader>j <Plug>(easymotion-s)
+
+" Open NERDTree at current file (use q to exit)
+map <leader>e :NERDTreeFind<CR>
+
+" Format code
+map <leader>f <action>(ReformatCode)
+
+" Folding
+map <leader>zc :action CollapseAllRegions<CR>
+map <leader>zo :action ExpandAllRegions<CR>
+
+" Start
+map <leader>sr <action>(Run)
+map <leader>sd <action>(Debug)
+map <leader>ss <action>(Stop)
+
+" Inspect
+map <leader>ip <action>(ParameterInfo)
+
+" File navigation
+map <leader>ps <action>(FindInPath)
+map <leader>pf <action>(GotoFile)
+map <leader>pr <action>(ReplaceInPath)
+map <leader>pc <action>(FindInPath)
+map <leader>pl <action>(RecentLocations)
+map <leader>pn <action>(NewScratchFile)
+
+" Window splits
+map <leader>wv <Action>(SplitVertically)
+map <leader>wh <Action>(SplitHorizontally)
+map <leader>wu <Action>(Unsplit)
+map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
+
+" Display options
+map <leader>dd <action>(ToggleDistractionFreeMode)
+map <leader>dz <action>(ToggleZenMode)
+map <leader>df <action>(ToggleFullScreen)
+
+" Close active tab
+map <leader>q <action>(CloseContent)
+
+" Open quickdocs 
+map <leader>t <action>(QuickJavaDoc)
+
+" Refactoring
+map <leader>rn <Action>(RenameElement)
+map <leader>rm <Action>(ExtractMethod)
+map <leader>rv <Action>(IntroduceVariable)
+map <leader>rf <Action>(IntroduceField)
+map <leader>rs <Action>(ChangeSignature)
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+
+" Debugging
+nmap <leader>ba <Action>(ToggleLineBreakpoint)
+nmap <leader>bc <Action>(Debugger.RemoveAllBreakpoints)
+
+" Go to code
+nmap <leader>gd <Action>(GotoDeclaration)
+nmap <leader>gy <Action>(GotoTypeDeclaration)
+nmap <leader>gi <Action>(GotoImplementation)
+nmap <leader>gu <Action>(ShowUsages)
+nmap <leader>gt <Action>(GotoTest)
+nmap <leader>gb <Action>(Back)
+nmap <leader>gf <Action>(Forward)
+
+" Git windows
+map <leader>gc <Action>(CheckinProject)
+map <leader>gs <Action>(ActivateVersionControlToolWindow)
+map <leader>gb <Action>(Git.Branches)
+
+" Harpoon
+nmap <leader>h1 :action GotoHarpoon1<cr>
+nmap <leader>h2 :action GotoHarpoon2<cr>
+nmap <leader>h3 :action GotoHarpoon3<cr>
+nmap <leader>h4 :action GotoHarpoon4<cr>
+
+nmap <C-e> :action ShowHarpoon<cr>
+nmap <leader>a :action AddToHarpoon<cr>
+
+" Increase and decrease font size
+map <leader>uif <Action>(EditorIncreaseFontSize)
+map <leader>udf <Action>(EditorDecreaseFontSize)
