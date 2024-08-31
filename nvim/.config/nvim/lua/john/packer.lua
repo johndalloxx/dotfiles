@@ -22,7 +22,7 @@ return require('packer').startup(function(use)
     use('theprimeagen/harpoon')
     use('jlcrochet/vim-razor')
     use('b3nj5m1n/kommentary')
-    use('jmederosalvarado/roslyn.nvim')
+    use('seblj/roslyn.nvim')
     use('mbbill/undotree')
     use({
         "kylechui/nvim-surround",
