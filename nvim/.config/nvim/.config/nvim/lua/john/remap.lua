@@ -1,7 +1,6 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>cd", ":cd %:p:h<CR>:pwd<CR>")
-vim.keymap.set("n", "<C-s>", "<C-a>")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -21,16 +20,14 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- Deleting without yanking, not using at the moment
 -- vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
--- vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
-
 
 -- No neck pain remaps
 vim.keymap.set("n", "<leader>dd", ":NoNeckPain<CR>")
-vim.keymap.set("n", "<leader>dv", ":NoNeckPainToggleLeftSide<CR>")
-vim.keymap.set("n", "<leader>dh", ":NoNeckPainToggleRightSide<CR>")
 vim.keymap.set("n", "<leader>dm", ":NoNeckPainWidthUp<CR>")
 vim.keymap.set("n", "<leader>dl", ":NoNeckPainWidthDown<CR>")
 
+-- This is going to get me cancelled
+vim.keymap.set("i", "jk", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)

@@ -6,16 +6,13 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    use 'ocaml/merlin'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
     use { "catppuccin/nvim", as = "catppuccin" }
-    use { "ellisonleao/gruvbox.nvim" }
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-    use("OXY2DEV/markview.nvim")
     use('nvim-treesitter/playground')
     use('nvim-tree/nvim-tree.lua')
     use('github/copilot.vim')
@@ -25,7 +22,7 @@ return require('packer').startup(function(use)
     use('theprimeagen/harpoon')
     use('jlcrochet/vim-razor')
     use('b3nj5m1n/kommentary')
-    use('seblj/roslyn.nvim')
+    use('jmederosalvarado/roslyn.nvim')
     use('mbbill/undotree')
     use({
         "kylechui/nvim-surround",

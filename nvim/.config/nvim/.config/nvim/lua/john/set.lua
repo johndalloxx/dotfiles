@@ -29,6 +29,8 @@ vim.opt.incsearch = true
 
 vim.opt.clipboard:append("unnamedplus")
 
+vim.opt.termguicolors = true
+
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
@@ -39,4 +41,3 @@ vim.opt.colorcolumn = "80"
 vim.g.mapleader = " "
 
 vim.env.CPATH = '/usr/local/include:/opt/homebrew/include/cs50:/opt/homebrew/opt/libxcrypt/include:' .. (vim.env.CPATH or '')
-vim.opt.rtp:append("/Users/johnfredrikdall/.opam/default/share/ocp-indent/vim")

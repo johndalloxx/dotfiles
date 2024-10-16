@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/john/.cache/nvim/packer_hererocks/2.1.1720049189/share/lua/5.1/?.lua;/home/john/.cache/nvim/packer_hererocks/2.1.1720049189/share/lua/5.1/?/init.lua;/home/john/.cache/nvim/packer_hererocks/2.1.1720049189/lib/luarocks/rocks-5.1/?.lua;/home/john/.cache/nvim/packer_hererocks/2.1.1720049189/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/john/.cache/nvim/packer_hererocks/2.1.1720049189/lib/lua/5.1/?.so"
+local package_path_str = "/Users/johnfredrikdall/.cache/nvim/packer_hererocks/2.1.1725453128/share/lua/5.1/?.lua;/Users/johnfredrikdall/.cache/nvim/packer_hererocks/2.1.1725453128/share/lua/5.1/?/init.lua;/Users/johnfredrikdall/.cache/nvim/packer_hererocks/2.1.1725453128/lib/luarocks/rocks-5.1/?.lua;/Users/johnfredrikdall/.cache/nvim/packer_hererocks/2.1.1725453128/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/johnfredrikdall/.cache/nvim/packer_hererocks/2.1.1725453128/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/john/.local/share/nvim/site/pack/packer/start/fzf.vim",
     url = "https://github.com/junegunn/fzf.vim"
   },
+  ["gruvbox.nvim"] = {
+    loaded = true,
+    path = "/Users/johnfredrikdall/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    url = "https://github.com/ellisonleao/gruvbox.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/john/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -135,6 +140,11 @@ _G.packer_plugins = {
     path = "/home/john/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
+  ["markview.nvim"] = {
+    loaded = true,
+    path = "/Users/johnfredrikdall/.local/share/nvim/site/pack/packer/start/markview.nvim",
+    url = "https://github.com/OXY2DEV/markview.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/john/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -144,6 +154,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/john/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  merlin = {
+    loaded = true,
+    path = "/Users/johnfredrikdall/.local/share/nvim/site/pack/packer/start/merlin",
+    url = "https://github.com/ocaml/merlin"
   },
   ["no-neck-pain.nvim"] = {
     loaded = true,
@@ -203,7 +218,7 @@ _G.packer_plugins = {
   },
   ["roslyn.nvim"] = {
     loaded = true,
-    path = "/home/john/.local/share/nvim/site/pack/packer/start/roslyn.nvim",
+    path = "/Users/johnfredrikdall/.local/share/nvim/site/pack/packer/start/roslyn.nvim",
     url = "https://github.com/seblj/roslyn.nvim"
   },
   ["telescope.nvim"] = {
