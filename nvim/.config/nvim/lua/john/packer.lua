@@ -24,7 +24,6 @@ return require('packer').startup(function(use)
     use('christoomey/vim-tmux-navigator')
     use('theprimeagen/harpoon')
     use('jlcrochet/vim-razor')
-    use('b3nj5m1n/kommentary')
     use('seblj/roslyn.nvim')
     use('mbbill/undotree')
     use({

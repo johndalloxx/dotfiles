@@ -140,8 +140,9 @@ require("roslyn").setup({
     -- a lot faster to initialize.
     filewatching = true,
 })
-require'lspconfig'.ocamllsp.setup{}
+require('lspconfig').ocamllsp.setup {}
 require('lspconfig').sourcekit.setup {
+    root_dir = require('lspconfig').util.root_pattern("Package.swift", "*.xcodeproj", "*.xcworkspace", "*.xcconfig", "compile_commands.json"),
     capabilities = {
         workspace = {
             didChangeConfiguration = {
