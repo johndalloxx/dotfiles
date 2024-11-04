@@ -1,4 +1,4 @@
-@import "mocha.css"; 
+@import "colors.css"; 
 
 * {
     font-family: "MesloLGS Nerd Font Mono Bold";
@@ -18,8 +18,8 @@ window#waybar {
 
 #window {
     margin: 0;
-    padding-left: 8;
-    padding-right: 8;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 button {
@@ -40,8 +40,8 @@ button:hover {
 
 #workspaces button.focused {
     background-color: rgba(0, 0, 0, 0.3);
-    color: @rosewater;
-    border-top: 2px solid @rosewater;
+    color: @maroon;
+    border-top: 2px solid @maroon;
 }
 
 #workspaces button.active {
@@ -60,7 +60,6 @@ button:hover {
 #cpu,
 #memory,
 #disk,
-#temperature,
 #backlight,
 #wireplumber,
 #tray,
@@ -73,6 +72,21 @@ button:hover {
   margin-right: 4px;
   padding-left: 4px;
   padding-right: 4px;
+}
+
+#backlight {
+    color: @teal;
+    border-bottom: 2px solid @teal;
+}
+
+#cpu {
+    color:  @lavender;
+    border-bottom: 2px solid @lavender;
+}
+
+#memory {
+    color: @sky;
+    border-bottom: 2px solid @sky;
 }
 
 #clock {
