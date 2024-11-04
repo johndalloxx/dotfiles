@@ -56,7 +56,6 @@ return require('packer').startup(function(use)
             { 'rafamadriz/friendly-snippets' }, -- Optional
         }
     }
-    use('windwp/nvim-autopairs')
     use {
         'phaazon/hop.nvim',
         branch = 'v2', -- optional but strongly recommended
