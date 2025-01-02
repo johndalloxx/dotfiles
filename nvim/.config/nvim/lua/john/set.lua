@@ -1,5 +1,8 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
+vim.opt.guicursor = "n-v-i-c:block-Cursor"
+vim.o.showmode = false
+vim.o.showcmd = false
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4

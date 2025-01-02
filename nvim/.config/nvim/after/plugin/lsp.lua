@@ -154,5 +154,4 @@ require('lspconfig').sourcekit.setup {
 }
 
 
-
 lsp.setup()
