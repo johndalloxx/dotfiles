@@ -1,7 +1,6 @@
 // -*- mode: jsonc -*-
 {
-    "output": "eDP-1",
-    //"output": "DP-4",
+    //"output": "HDMI-A-1",
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
@@ -15,17 +14,15 @@
         "hyprland/window"
     ],
     "modules-right": [
+        "hyprland/language",
         "mpd",
         "idle_inhibitor",
         "pulseaudio",
         "network",
         "cpu",
         "memory",
-        "backlight",
-        "battery",
         "clock",
         "tray",
-        "custom/power"
     ],
     // Modules configuration
      "hyprland/workspaces": {
@@ -39,14 +36,14 @@
              "default": ""
          }
      },
+     "hyprland/language": {
+         "format": "{}",
+         "format-no": "NO",
+         "format-en": "US"
+         },
     "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
+        "format": "{}",
+        "tooltip": false
     },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
