@@ -75,8 +75,23 @@ lsp.on_attach(function(_, bufnr)
 end)
 
 require('lspconfig').ts_ls.setup({
-    capabilities = cmp_capabilities
+    capabilities = cmp_capabilities,
+    settings = {
+        typescript = {
+            format = {
+                convertTabsToSpaces = false,
+                tabSize = 4,
+            },
+        },
+        javascript = {
+            format = {
+                convertTabsToSpaces = false,
+                tabSize = 4,
+            },
+        },
+    }
 })
+
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 require('lspconfig').lua_ls.setup({
     capabilities = cmp_capabilities,
