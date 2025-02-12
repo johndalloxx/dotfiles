@@ -14,12 +14,12 @@ vim.keymap.set("n", "<leader>dh", ":NoNeckPainToggleRightSide<CR>")
 vim.keymap.set("n", "<leader>dm", ":NoNeckPainWidthUp<CR>")
 vim.keymap.set("n", "<leader>dl", ":NoNeckPainWidthDown<CR>")
 
+vim.keymap.set('n', '<leader>db', ':DBUIToggle<CR>')
+
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
-
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 --Window splitting
 vim.keymap.set("n", "<leader>sv", "<C-W>v")     -- split window vertically
@@ -34,9 +34,5 @@ vim.keymap.set("n", "<leader>cfn", ":cnfile<CR>")
 vim.keymap.set("n", "<leader>cfp", ":cpfile<CR>")
 
 vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end)
-
-vim.keymap.set("n", "<leader>j", function()
-    require("hop").hint_words()
+	vim.cmd("so")
 end)

@@ -4,6 +4,23 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
+	use 'tpope/vim-dadbod'
+	use 'kristijanhusak/vim-dadbod-ui'
+	use({
+		"kristijanhusak/vim-dadbod-completion",
+		ft = { "sql", "mysql", "plsql" },
+		config = function()
+			local cmp = require("cmp")
+			-- For SQL filetypes, add Dadbod as a source
+			cmp.setup.filetype({ "sql", "mysql", "plsql" }, {
+				sources = cmp.config.sources({
+					{ name = "vim-dadbod-completion" },
+					{ name = "buffer" },
+					-- add other sources here
+				})
+			})
+		end
+	})
 	use 'wbthomason/packer.nvim'
 	use 'ocaml/merlin'
 	use { 'junegunn/fzf', hook = vim.fn['fzf#install'] }
