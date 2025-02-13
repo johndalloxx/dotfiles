@@ -4,6 +4,9 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
+	use { "nvim-neotest/nvim-nio" }
+	use 'mfussenegger/nvim-dap'
+	use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
 	use 'tpope/vim-dadbod'
 	use 'kristijanhusak/vim-dadbod-ui'
 	use({
