@@ -42,3 +42,8 @@ vim.opt.colorcolumn = "80"
 vim.g.mapleader = " "
 
 vim.opt.rtp:append("/Users/johnfredrikdall/.opam/default/share/ocp-indent/vim")
+
+vim.g.neovide_cursor_animation_length = 0
+vim.g.neovide_scroll_animation_length = 0
+vim.g.neovide_cursor_trail_size = 0
+vim.g.neovide_cursor_vfx_mode = ""

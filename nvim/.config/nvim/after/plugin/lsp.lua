@@ -92,6 +92,20 @@ require('lspconfig').ts_ls.setup({
     }
 })
 
+require('lspconfig').rust_analyzer.setup({
+    capabilities = cmp_capabilities,
+    handlers = {
+        ["textDocument/publishDiagnostics"] = function() end,  -- Empty handler
+    },
+    settings = {
+        ["rust-analyzer"] = {
+            diagnostics = {
+                enable = false
+            }
+        }
+    }
+})
+
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 require('lspconfig').lua_ls.setup({
     capabilities = cmp_capabilities,
@@ -103,6 +117,8 @@ require('lspconfig').lua_ls.setup({
         }
     }
 })
+
+require'lspconfig'.fsharp_language_server.setup{}
 
 require('lspconfig').clangd.setup {
     on_attach = lsp.on_attach,
